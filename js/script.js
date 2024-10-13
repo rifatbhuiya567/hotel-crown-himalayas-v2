@@ -27,4 +27,8 @@
             scrollTop: 0
         }, 500);
     });
+
+    const d = new Date();
+    let year = d.getFullYear();
+    $("#currentYear").html(year);
 })(jQuery);

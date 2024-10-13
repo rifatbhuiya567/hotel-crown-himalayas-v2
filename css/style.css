@@ -76,9 +76,12 @@
 :root {
     /* Colors */
     --primary_color: #6f4725;
+    --primary_light: #b99267;
     --primary_dark: #41260f;
     --white_color: #ffffff;
+    --cream_color: #f8f7f6;
     --black_color: #000000;
+    --text_color: #5c5f5f;
 
     /* Round */
     --round_sm: 3px;
@@ -157,6 +160,7 @@ body {
     font-size: var(--bs);
     scroll-behavior: smooth;
     font-family: var(--font_regular);
+    background-color: var(--cream_color);
 }
 
 a {
@@ -165,6 +169,38 @@ a {
     -moz-transition: var(--transition);
     -ms-transition: var(--transition);
     -o-transition: var(--transition);
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-padding-bottom {
+    padding-bottom: 80px;
+}
+
+.section-small-title {
+    font-size: clamp(11px,.977vw,15px);
+    line-height: clamp(20px,1.302vw,20px);
+    font-family: var(--font_medium);
+    text-transform: uppercase;
+    color: rgba(111,71,37,0.59);
+    padding-bottom: 2.5%;
+}
+
+.section-heading {
+    font-size: clamp(20px,1.823vw,28px);
+    line-height: clamp(30px,2.083vw,32px);
+    text-transform: uppercase;
+    color: var(--primary_color);
+    font-family: var(--font_light);
+    padding-bottom: 4.05%
+}
+
+.section-description {
+    color: var(--text_color);
+    font-size: clamp(11px,.911vw,14px);
+    line-height: clamp(20px,1.563vw,24px);
 }
 /* Common CSS End */
 
@@ -183,7 +219,8 @@ a {
 }
 
 .main-header.fixed-header {
-    background-color: var(--white_color);
+    background-color: var(--cream_color);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .main-header .logo {
@@ -464,3 +501,554 @@ a {
     object-position: center;
 }
 /* Hero CSS End */
+
+.about ul a {
+    text-transform: uppercase;
+    font-family: var(--font_medium);
+    letter-spacing: 1.2px;
+    font-size: clamp(11px,.846vw,13px);
+    line-height: clamp(24px, 1.563vw, 24px);
+    color: var(--primary_color);
+}
+
+.about ul li:first-child a {
+    position: relative;
+}
+
+.about ul li:first-child a::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 60%;
+    background-color: var(--primary_color);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.about ul li:first-child a:hover::after {
+    width: 80%;
+}
+/* About CSS End */
+
+.wellness .slider-content img {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.wellness .slider-content .overlay {
+    bottom: 12%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(238,231,221,0.72);
+    padding: 3%;
+    text-align: center;
+}
+
+.wellness .slider-content .overlay h3 {
+    text-transform: uppercase;
+    color: var(--primary_color);
+    font-size: clamp(20px,1.563vw,24px);
+    line-height: clamp(30px,1.953vw,30px);
+}
+
+.wellness .slick-dots {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.wellness .slick-dots li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.wellness .slick-dots li button {
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+    border: 1px solid var(--white_color);
+    color: transparent;
+    border-radius: var(--round_full);
+    -webkit-border-radius: var(--round_full);
+    -moz-border-radius: var(--round_full);
+    -ms-border-radius: var(--round_full);
+    -o-border-radius: var(--round_full);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.wellness .slick-dots li.slick-active button {
+    background-color: var(--white_color);
+}
+
+.wellness ul a {
+    text-transform: uppercase;
+    font-family: var(--font_medium);
+    letter-spacing: 1.2px;
+    font-size: clamp(11px,.846vw,13px);
+    line-height: clamp(24px, 1.563vw, 24px);
+    color: var(--primary_color);
+}
+
+.wellness ul li:first-child a {
+    position: relative;
+}
+
+.wellness ul li:first-child a::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 60%;
+    background-color: var(--primary_color);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.wellness ul li:first-child a:hover::after {
+    width: 80%;
+}
+
+.wellness .icon {
+    bottom: -50px;
+    right: 0;
+}
+/* Wellness CSS End */
+
+.quote {
+    height: 500px;
+    position: relative;
+    z-index: 1;
+    color: var(--white_color);
+}
+
+.quote::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.quote blockquote {
+    font-size: clamp(20px,1.563vw,24px);
+    line-height: clamp(30px,1.953vw,30px);
+}
+/* Blockquote CSS End */
+
+.faq .slider-content img {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.faq .faq-slider .slick-dots {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.faq .faq-slider .slick-dots li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.faq .faq-slider .slick-dots li button {
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+    border: 1px solid var(--white_color);
+    color: transparent;
+    border-radius: var(--round_full);
+    -webkit-border-radius: var(--round_full);
+    -moz-border-radius: var(--round_full);
+    -ms-border-radius: var(--round_full);
+    -o-border-radius: var(--round_full);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.faq .faq-slider .slick-dots li.slick-active button {
+    background-color: var(--white_color);
+}
+
+.faq .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.faq .accordion-button:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+.faq .accordion-item {
+    background-color: transparent;
+}
+
+.faq .accordion-button {
+    padding: var(--bs-accordion-btn-padding-y) 8px;
+    background-color: transparent;
+}
+
+.faq .accordion-body {
+    padding: 8px;
+}
+
+.faq h4.accordion-header button {
+    color: var(--primary_light);
+    text-transform: uppercase;
+    font-family: var(--font_light);
+    font-size: clamp(11px,.977vw,15px);
+    line-height: clamp(24px,1.563vw,24px);
+}
+
+.faq .accordion-body p {
+    font-size: clamp(11px,.911vw,14px);
+    line-height: clamp(20px,1.563vw,24px);
+}
+/* Faq CSS End */
+
+.packages .section-small-title {
+    padding-bottom: 1%;
+}
+
+.packages .package-card img {
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.packages .overlay {
+    padding: 22% 6% 6%;
+    width: 100%;
+    color: var(--white_color);
+    background: linear-gradient(0,var(--black_color) 0,rgba(111,71,37,0.00) 100%);
+}
+.packages .package-card .overlay h3 {
+    text-transform: uppercase;
+    animation: translateDown .8s ease-in-out;
+    -webkit-animation: translateDown .8s ease-in-out;
+    font-family: var(--font_light);
+    font-size: clamp(15px,1.302vw,20px);
+    line-height: clamp(20px,1.628vw,25px);
+}
+
+.packages .package-card:hover .overlay h3 {
+    animation: translateUp .8s ease-in-out;
+    -webkit-animation: translateUp .8s ease-in-out;
+}
+
+.packages .package-card .overlay p {
+    padding: 4% 9% 2% 0;
+    display: none;
+    font-size: clamp(11px,1.075vw,15px);
+    animation: translateDown .8s ease-in-out;
+    -webkit-animation: translateDown .8s ease-in-out;
+}
+
+.packages .package-card:hover .overlay p {
+    display: block;
+    animation: translateUp .8s ease-in-out;
+    -webkit-animation: translateUp .8s ease-in-out;
+}
+
+@keyframes translateDown {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+@keyframes translateUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.packages .package-card .overlay li a {
+    color: var(--white_color);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: clamp(11px,.846vw,13px);
+    line-height: clamp(24px,1.563vw,24px);
+    position: relative;
+}
+
+.packages .package-card .overlay li a::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 80%;
+    background-color: var(--white_color);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.packages .package-card:hover .overlay ul li:first-child a::after {
+    width: 92%;
+}
+
+.packages .package-card .overlay ul li:last-child a:hover::after {
+    width: 92%;
+}
+/* Packages CSS End */
+
+.experience-slider .slider-content img {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.experiences .section-small-title {
+    padding-bottom: 1%;
+}
+
+.experiences .experience-slider .slider-content.slick-slide {
+    margin: 0 12px;
+}
+
+.experience-slider .slider-title {
+    width: 75%;
+    margin: 0 auto;
+    padding: 12px 20px;
+    text-align: center;
+    color: var(--primary_color);
+    background-color: #e9dccd;
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.experience-slider .slider-content:hover .slider-title {
+    background-color: #ba9f82;
+}
+
+.experience-slider .slider-title h5 {
+    text-transform: uppercase;
+    font-size: clamp(11px,.846vw,13px);
+    line-height: clamp(24px,1.563vw,24px);
+    font-family: var(--font_medium);
+    letter-spacing: 1.2px;
+}
+
+.experiences .experience-slider .slick-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.experiences .experience-slider .slick-dots li {
+    margin: 0;
+    display: inline-block;
+    width: 8%;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    background: var(--primary_light);
+    height: 1px;
+}
+
+.experiences .experience-slider .slick-dots li.slick-active {
+    width: 16%;
+    height: 2px;
+    background: var(--primary_color);
+    transform: translateY(-1px);
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+}
+
+.experiences .experience-slider .slick-dots li button {
+    width: 100%;
+    border: none;
+    color: transparent;
+    background-color: transparent;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.experiences .experience-slider .slick-dots li button:before {
+    width: 100%;
+    height: 100%;
+    content: ""
+}
+/* Experiences CSS End */
+
+.service ul a {
+    text-transform: uppercase;
+    font-family: var(--font_medium);
+    letter-spacing: 1.2px;
+    font-size: clamp(11px,.846vw,13px);
+    line-height: clamp(24px, 1.563vw, 24px);
+    color: var(--primary_color);
+}
+
+.service ul a {
+    position: relative;
+}
+
+.service ul a::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 60%;
+    background-color: var(--primary_color);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.service ul a:hover::after {
+    width: 80%;
+}
+/* Service CSS End */
+
+.testimonial-card {
+    background-color: #e9dccd;
+}
+
+.testimonial-card .img img {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.testimonial-card .content {
+    padding: 8.1% 9.5%;
+}
+
+.testimonial-card h3 {
+    text-transform: uppercase;
+    font-size: clamp(15px,1.302vw,20px);
+    line-height: clamp(20px,1.628vw,25px);
+    color: var(--primary_color);
+}
+
+.testimonial-card p {
+    font-family: var(--font_light);
+    font-size: clamp(11px,.911vw,14px);
+    line-height: clamp(20px,1.563vw,24px);
+    color: #5c5f5f;
+}
+
+.testimonial-card ul i {
+    font-size: clamp(11px,0.977vw,15px);
+    color: var(--primary_color);
+}
+/* Testimonial CSS End */
+
+.main-footer {
+    color: var(--primary_color);
+    font-size: clamp(12px,1.041vw,16px);
+    line-height: clamp(20px,1.953vw,30px);
+}
+
+.main-footer .logo img {
+    width: 180px;
+}
+
+.main-footer address {
+    color: var(--primary_color);
+}
+
+.main-footer .d-flex ul a {
+    color: var(--primary_color);
+    padding-bottom: 2%;
+}
+
+.main-footer .d-flex ul a:hover {
+    text-decoration: underline;
+}
+
+.main-footer .contact li {
+    padding-bottom: 2%;
+}
+
+.main-footer .contact a,
+.main-footer .contact span {
+    color: var(--primary_color);
+}
+
+.main-footer .contact a:hover {
+    text-decoration: underline;
+}
+
+.main-footer .social a {
+    font-size: 20px;
+    color: var(--primary_color);
+}
+
+.main-footer hr {
+    border-color: var(--primary_dark);
+}
+
+.main-footer .copyright,
+.main-footer .copyright a {
+    color: var(--primary_color);
+}
+
+.main-footer .copyright a:hover {
+    text-decoration: underline;
+}
+/* Footer CSS End */
